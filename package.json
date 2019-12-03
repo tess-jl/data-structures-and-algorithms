@@ -9,8 +9,8 @@
     "jest": "^24.9.0"
   },
   "scripts": {
-    "test": "jest",
-    "test:watch": "npm run test -- --watch",
+    "test": "jest --coverage",
+    "test:watch": "npm run test -- --watchAll",
     "lint": "eslint '**/*.js'"
   },
   "repository": {
