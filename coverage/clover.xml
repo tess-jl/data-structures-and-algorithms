@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1575445410751" clover="3.2.0">
-  <project timestamp="1575445410751" name="All files">
-    <metrics statements="16" coveredstatements="15" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2" elements="20" coveredelements="18" complexity="0" loc="16" ncloc="16" packages="2" files="2" classes="2"/>
+<coverage generated="1575574346809" clover="3.2.0">
+  <project timestamp="1575574346809" name="All files">
+    <metrics statements="26" coveredstatements="25" conditionals="6" coveredconditionals="5" methods="3" coveredmethods="3" elements="35" coveredelements="33" complexity="0" loc="26" ncloc="26" packages="3" files="3" classes="3"/>
+    <package name="arrayBinarySearch">
+      <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <file name="array-binary-search.js" path="/Users/Tess/alchemy/career-track/code-challenges/data-structures-and-algorithms/challenges/arrayBinarySearch/array-binary-search.js">
+        <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="16" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+      </file>
+    </package>
     <package name="arrayReverse">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="array-reverse.js" path="/Users/Tess/alchemy/career-track/code-challenges/data-structures-and-algorithms/challenges/arrayReverse/array-reverse.js">
