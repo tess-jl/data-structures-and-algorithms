@@ -10,6 +10,7 @@ class LinkedList {
   constructor() {
     //in order to get every node in the chain you need a reference to the first node!! akak the head, linked list starts out with nothing in it so it starts out as null 
     this.head = null;
+    this.length = 0;
   }
 
   insert(value) {
@@ -36,7 +37,7 @@ class LinkedList {
       if(!thisNode.next) {
         valuesStringed += thisNode.value;
       } else {
-        valuesStringed += thisNode.value + '-> ';
+        valuesStringed += thisNode.value + ' -> ';
       }
       thisNode = thisNode.next;
     }
@@ -57,7 +58,7 @@ class LinkedList {
 
   //append(value) which adds a new node with the given value to the end of the list
   append(value) {
-    const newNode = new Node(value);
+    const newNode = new Node(value, null);
     let currentNode = this.head;
 
     while(currentNode.next !== null)
