@@ -36,9 +36,9 @@ class LinkedList {
     let valuesStringed = '';
     while(thisNode){
       if(!thisNode.next) {
-        valuesStringed += thisNode.value;
+        valuesStringed += thisNode.value.toString();
       } else {
-        valuesStringed += thisNode.value + ' -> ';
+        valuesStringed += thisNode.value.toString() + ' -> ';
       }
       thisNode = thisNode.next;
     }
@@ -62,7 +62,7 @@ class LinkedList {
     let currentNode = this.head;
     const newNode = new Node(value, null);
 
-    while(currentNode.next !== null) currentNode = currentNode.next;
+    while(currentNode.next) currentNode = currentNode.next;
     currentNode.next = newNode;
     this.length++;
   }
@@ -70,38 +70,53 @@ class LinkedList {
 
   //insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
   //search for the value
-  insertBefore(value, newVal) {
+  insertBefore(valToInsert, ref) {
     //create two variables that can later be separated
     let currentNode = this.head;
     let previous = this.head; 
 
+    if(this.head.value === ref) {
+      this.insert(valToInsert);
+      return;
+    }
+
     while(currentNode) {
       //once we reach the value we want to insert before
-      if(currentNode.value === value) { 
+      if(currentNode.value === ref) { 
         //create a new node with the newVal param and set it equal to the head
-        const nodeToInsert = new Node(newVal, this.head); 
+        // const nodeToInsert = new Node(valToInsert, this.head); 
+        //this.head is equal to currentNode! currentNode is actually the NEXT node in the sequence 
+        const nodeToInsert = new Node(valToInsert, currentNode); 
         previous.next = nodeToInsert; 
+        this.length++;
+        return;
       }
       //if haven't found value then keep currentNode same as previous 
       currentNode = previous; 
       //iterate 
       currentNode = currentNode.next; 
     }
-
   }
-
   //insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
-  insertAfter(value, newVal) {
+  insertAfter(valToInsert, ref) {
     let currentNode = this.head;
+    let previous = this.head; 
     
     while(currentNode) {
-      if(currentNode.value === value) { 
-        const nodeToInsert = new Node(newVal, this.head); 
+      if(currentNode.value === ref) { 
+        const nodeToInsert = new Node(valToInsert, currentNode.next); 
         currentNode.next = nodeToInsert;
+        this.length++;
+        return;
       }
+      currentNode = previous; 
       currentNode = currentNode.next; 
     }
   }
+
+
+
+
 }
 
 module.exports = { LinkedList };
