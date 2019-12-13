@@ -18,6 +18,7 @@ class LinkedList {
     const newNode = new Node(value, this.head);
     //reset head to the node inserted
     this.head = newNode;
+    this.length++;
   }
 
   includes(value) {
@@ -58,12 +59,12 @@ class LinkedList {
 
   //append(value) which adds a new node with the given value to the end of the list
   append(value) {
-    const newNode = new Node(value, null);
     let currentNode = this.head;
+    const newNode = new Node(value, null);
 
-    while(currentNode.next !== null)
-      currentNode = currentNode.next;
+    while(currentNode.next !== null) currentNode = currentNode.next;
     currentNode.next = newNode;
+    this.length++;
   }
 
 

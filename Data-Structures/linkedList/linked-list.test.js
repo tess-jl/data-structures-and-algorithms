@@ -16,6 +16,7 @@ describe('linked list tests', () => {
 
     expect(ll.head.value).toEqual(2);
     expect(ll.toString()).toEqual('2 -> 1');
+
   });
 
   it('tests if a specific value is included in the linked list', () => {
@@ -26,6 +27,15 @@ describe('linked list tests', () => {
 
     expect(test1).toEqual(true);
     expect(test2).toEqual(false);
+  });
+
+  it('appends a specific value to the linked list', () => {
+    ll.insert(1);
+    ll.append(2);
+
+    expect(ll.head.next.value).toEqual(2);
+    expect(ll.head).toEqual({ 'next': { 'next': null, 'value': 2 }, 'value': 1 });
+    expect(ll.length).toEqual(2);
   });
   
   // it('adds a new node with the given value to the end of the list', () => {
