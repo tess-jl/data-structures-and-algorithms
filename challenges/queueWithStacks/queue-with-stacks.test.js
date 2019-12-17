@@ -1,6 +1,5 @@
 const { PsuedoQueue } = require('./queue-with-stacks.js');
 
-
 describe('pseudo quee code challenge', () => {
   it('should string the stack', () => {
     const pq = new PsuedoQueue;
