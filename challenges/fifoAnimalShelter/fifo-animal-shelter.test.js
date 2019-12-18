@@ -23,13 +23,21 @@ describe('shelter queue code challenge', () => {
     expect(sq.dogQueue.stringQueue()).toEqual('spot , ');
   });
 
-  // it('should remove a value from stack1 of the PsuedoQueue using and first in, first out approach on the stacks', () => {
-  //   const pq = new PsuedoQueue;
-  //   pq.stack1.push(1);
-  //   pq.stack1.push(2);
-  //   pq.stack1.push(3);
-  //   pq.dequeue(3);
+  it('should remove a value from stack1 of the PsuedoQueue using and first in, first out approach on the stacks', () => {
+    const sq = new ShelterQueue;
+    sq.putAnimalInCorrectQueue({
+      name: 'spot', 
+      type: 'dog',
+      age: 5
+    });
+    sq.putAnimalInCorrectQueue({
+      name: 'fido', 
+      type: 'dog',
+      age: 5
+    });
+    expect(sq.dogQueue.stringQueue()).toEqual('spot , fido , ');
 
-  //   expect(pq.string()).toEqual('2 , 1 , ');
-  // });
+    sq.dequeueByPref('dog');
+    expect(sq.dogQueue.stringQueue()).toEqual('fido , ');
+  });
 }); 

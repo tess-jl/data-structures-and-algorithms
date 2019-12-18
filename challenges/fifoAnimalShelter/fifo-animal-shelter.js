@@ -92,9 +92,15 @@ class ShelterQueue {
     this.back = node;
   }
 
-  dequeue() {
-    this.stack1.pop();
-    return this.stack1;
+  dequeueByPref(pref) {
+    if(pref === 'cat') {
+      this.catQueue.dequeue();
+    } else if(pref === 'dog') {
+      this.dogQueue.dequeue();
+    } else {
+      return 'no animal of your preference to dequeue';
+    }
+    
   }
 }
 
