@@ -114,8 +114,16 @@ class LinkedList {
     }
   }
 
+  kthFromEnd(k) {
+    const k = this.length - k; 
+    let currentNode = this.head; 
 
+    while(currentNode) {
 
+      currentNode = currentNode.next; 
+    }
+    
+  }
 
 }
 

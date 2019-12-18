@@ -66,6 +66,44 @@ describe('linked list tests', () => {
   });
 
 
+
+
+  it('has function kthFromEnd that works with a “Happy Path” where k is not at the end, but somewhere in the middle of the linked list', () => {
+    ll.insert(1);
+    ll.insert(2);
+    ll.insert(3);
+    
+    expect(ll.kthFromEnd(2)).toEqual(2);
+  });
+
+  it('has function kthFromEnd that works with a linked list that is of a size 1', () => {
+    ll.insert(1);
+    
+    expect(ll.kthFromEnd(0)).toEqual(1);
+  });
+
+  it('has function kthFromEnd that throws error when k is not a positive integer', () => {
+    ll.insert(1);
+    ll.insert(2);
+    ll.insert(3);
+    
+    expect(ll.kthFromEnd(-1)).toEqual('not a valid k value');
+  });
+
+  it('has function kthFromEnd that works when k and the length of the list are the same', () => {
+    ll.insert(1);
+    ll.insert(2);
+    ll.insert(3);
+    
+    expect(ll.kthFromEnd(3)).toEqual(1);
+  });
+  it('has function kthFromEnd that throws error when k is greater than the length of the linked list', () => {
+    ll.insert(1);
+    ll.insert(2);
+    ll.insert(3);
+    
+    expect(ll.kthFromEnd(3)).toEqual(1);
+  });
   
 
 });
