@@ -73,7 +73,7 @@ describe('linked list tests', () => {
     ll.insert(2);
     ll.insert(3);
     
-    expect(ll.kthFromEnd(2)).toEqual(2);
+    expect(ll.kthFromEnd(1)).toEqual(2);
   });
 
   it('has function kthFromEnd that works with a linked list that is of a size 1', () => {
@@ -95,14 +95,14 @@ describe('linked list tests', () => {
     ll.insert(2);
     ll.insert(3);
     
-    expect(ll.kthFromEnd(3)).toEqual(1);
+    expect(ll.kthFromEnd(3)).toEqual(3);
   });
   it('has function kthFromEnd that throws error when k is greater than the length of the linked list', () => {
     ll.insert(1);
     ll.insert(2);
     ll.insert(3);
     
-    expect(ll.kthFromEnd(3)).toEqual(1);
+    expect(ll.kthFromEnd(4)).toEqual('not a valid k value');
   });
   
 
