@@ -35,9 +35,16 @@ describe('shelter queue code challenge', () => {
       type: 'dog',
       age: 5
     });
+    sq.putAnimalInCorrectQueue({
+      name: 'tasha', 
+      type: 'cat',
+      age: 16
+    });
     expect(sq.dogQueue.stringQueue()).toEqual('spot , fido , ');
+    expect(sq.catQueue.stringQueue()).toEqual('tasha , ');
 
     sq.dequeueByPref('dog');
     expect(sq.dogQueue.stringQueue()).toEqual('fido , ');
+    expect(sq.catQueue.stringQueue()).toEqual('tasha , ');
   });
 }); 
