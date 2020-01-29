@@ -8,8 +8,8 @@ class Node {
 
 class BinaryTree {
 
-  preOrder() {
-
+  preOrder(node) {
+    
   }
 
   // inOrder()
