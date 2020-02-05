@@ -70,8 +70,22 @@ class BinaryTree {
   }
 
   inOrder() {
-    
+    if(this.root == null) {
+      return null;
+    }
+    const inOrderArray = [];
+    (function castInOrderArray(current){
+      if(current){
+        castInOrderArray(current.left);
+        inOrderArray.push(current.value);
+        castInOrderArray(current.right);
+      }
+    }).apply(null, [this.root]);
+    return inOrderArray;
   }
+
+
+  
 
 }
 

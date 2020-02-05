@@ -12,7 +12,6 @@ describe('BinaryTree tests', () => {
     tree.add(2);
     tree.add(16);
 
-    console.log(tree);
     expect(tree).toEqual({ 
       'root': {
         'value': 11,
@@ -47,6 +46,16 @@ describe('BinaryTree tests', () => {
     tree.add(17);
 
     expect(tree.preOrder()).toEqual([7, 2, 17]);
+  });
+
+  it('can provide the order of values in node from LNR, inorder', () => {
+    const tree = new BinaryTree();
+    tree.add(7);
+    tree.add(2);
+    tree.add(17);
+    console.log(tree)
+
+    expect(tree.inOrder()).toEqual([2, 7, 17]);
   });
 
 
