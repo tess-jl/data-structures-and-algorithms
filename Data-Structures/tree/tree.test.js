@@ -30,4 +30,25 @@ describe('BinaryTree tests', () => {
     });
   });
 
+  it('can tell if a tree contains a given value', () => {
+    const tree = new BinaryTree();
+    tree.add(7);
+    tree.add(2);
+    tree.add(17);
+
+    expect(tree.contains(7)).toBeTruthy;
+    expect(tree.contains(20)).toBeFalsy;
+  });
+
+  it('can provide the order of values in node from NLR, preorder', () => {
+    const tree = new BinaryTree();
+    tree.add(7);
+    tree.add(2);
+    tree.add(17);
+
+    expect(tree.preOrder()).toEqual([7, 2, 17]);
+  });
+
+
+
 });

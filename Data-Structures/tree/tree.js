@@ -39,25 +39,42 @@ class BinaryTree {
     return this; 
   }
 
+  contains(value) {
+    var current = this.root;
+    while(current) {
+      if(value === current.data) {
+        return true;
+      }
+      if(value < current.data) {
+        current = current.left;
+      } else {
+        current = current.right;
+      }
+    }
+    return false;
+  }
+  
+  preOrder() {
+    if(this.root == null) {
+      return null;
+    }
+    const preOrderArray = [];
+    (function castPreArray(current){
+      if(current){
+        preOrderArray.push(current.value);
+        castPreArray(current.left);
+        castPreArray(current.right);
+      }
+    }).apply(null, [this.root]);
+    return preOrderArray;
+  }
 
-
-  preOrder(node) {
+  inOrder() {
     
   }
 
-  // inOrder()
-  // postOrder()
-  //custom errors
 }
 
-// class SearchBinaryTree {
 
-//   add() {
-
-//   }
-
-//   // contains()
-
-// }
 
 module.exports = { Node, BinaryTree };
