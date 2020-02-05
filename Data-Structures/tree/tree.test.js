@@ -53,9 +53,18 @@ describe('BinaryTree tests', () => {
     tree.add(7);
     tree.add(2);
     tree.add(17);
-    console.log(tree)
+    
 
     expect(tree.inOrder()).toEqual([2, 7, 17]);
+  });
+
+  it('can provide the order of values in node from LRN, postorder', () => {
+    const tree = new BinaryTree();
+    tree.add(7);
+    tree.add(2);
+    tree.add(17);
+
+    expect(tree.postOrder()).toEqual([2, 17, 7]);
   });
 
 

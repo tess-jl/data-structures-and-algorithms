@@ -84,9 +84,20 @@ class BinaryTree {
     return inOrderArray;
   }
 
-
-  
-
+  postOrder() {
+    if(this.root == null) {
+      return null;
+    }
+    const postOrderArray = [];
+    (function castPostOrderArray(current){
+      if(current){
+        castPostOrderArray(current.left);
+        castPostOrderArray(current.right);
+        postOrderArray.push(current.value);
+      }
+    }).apply(null, [this.root]);
+    return postOrderArray;
+  }
 }
 
 
