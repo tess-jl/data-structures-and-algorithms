@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">40.91% </span>
+        <span class="strong">86.36% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>9/22</span>
+        <span class='fraction'>19/22</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">10% </span>
+        <span class="strong">70% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>1/10</span>
+        <span class='fraction'>7/10</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">75% </span>
@@ -35,16 +35,16 @@
         <span class='fraction'>3/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">40.91% </span>
+        <span class="strong">85.71% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>9/22</span>
+        <span class='fraction'>18/21</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -111,44 +111,44 @@
 <a name='L63'></a><a href='#L63'>63</a>
 <a name='L64'></a><a href='#L64'>64</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -186,34 +186,34 @@ class BinaryTree {
   }
 &nbsp;
   add(value) {
-    const node = this.root; 
-    //to add the first node 
-    <span class="missing-if-branch" title="else path not taken" >E</span>if(!node) {
-      this.root = new Node(value);
-      return; 
-    }
+    const node = new Node(value);
+    if(!this.root) this.root = node;
     else {
       //traverse and add node 
-      let current = <span class="cstat-no" title="statement not covered" >this.root; </span>
-<span class="cstat-no" title="statement not covered" >      while(current) {</span>
-<span class="cstat-no" title="statement not covered" >        if(node.value &lt; current.value) {</span>
-<span class="cstat-no" title="statement not covered" >          if(!current.left) {</span>
-<span class="cstat-no" title="statement not covered" >            current.left = node; </span>
-<span class="cstat-no" title="statement not covered" >            break;</span>
+      let current = this.root; 
+      while(current) {
+        if(node.value &lt; current.value) {
+          <span class="missing-if-branch" title="else path not taken" >E</span>if(!current.left) {
+            current.left = node; 
+            break;
           }
 <span class="cstat-no" title="statement not covered" >          current = current.left;</span>
 &nbsp;
-        } else <span class="cstat-no" title="statement not covered" >if(node.value &gt; current.value) {</span>
-<span class="cstat-no" title="statement not covered" >          if(!current.right) {</span>
-<span class="cstat-no" title="statement not covered" >            current.right = node; </span>
-<span class="cstat-no" title="statement not covered" >            break;</span>
+        } else <span class="missing-if-branch" title="else path not taken" >E</span>if(node.value &gt; current.value) {
+          <span class="missing-if-branch" title="else path not taken" >E</span>if(!current.right) {
+            current.right = node; 
+            break;
           }
 <span class="cstat-no" title="statement not covered" >          current = current.right;</span>
-        } 
+        } else {
+<span class="cstat-no" title="statement not covered" >          return null; </span>
+        }
       }
-<span class="cstat-no" title="statement not covered" >      return this; </span>
     }
+    return this; 
   }
+&nbsp;
+&nbsp;
 &nbsp;
 <span class="fstat-no" title="function not covered" >  pr</span>eOrder(node) {
     
@@ -241,7 +241,7 @@ module.exports = { Node, BinaryTree };
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Feb 04 2020 22:42:23 GMT-0800 (Pacific Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Feb 04 2020 23:27:39 GMT-0800 (Pacific Standard Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>

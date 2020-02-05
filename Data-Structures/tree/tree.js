@@ -12,12 +12,8 @@ class BinaryTree {
   }
 
   add(value) {
-    const node = this.root; 
-    //to add the first node 
-    if(!node) {
-      this.root = new Node(value);
-      return; 
-    }
+    const node = new Node(value);
+    if(!this.root) this.root = node;
     else {
       //traverse and add node 
       let current = this.root; 
@@ -35,11 +31,15 @@ class BinaryTree {
             break;
           }
           current = current.right;
-        } 
+        } else {
+          return null; 
+        }
       }
-      return this; 
     }
+    return this; 
   }
+
+
 
   preOrder(node) {
     
