@@ -1,12 +1,15 @@
 class Node {
-  constructor(value, left, right) {
+  constructor(value) {
     this.value = value;
-    this.left = left;
-    this.right = right;
+    this.left = null;
+    this.right = null;
   }
 }
 
 class BinaryTree {
+  constructor() {
+    this.root = null;
+  }
 
   preOrder(node) {
     
