@@ -28,7 +28,7 @@ class BinaryTree {
             break;
           }
           current = current.left;
-          
+
         } else if(node.value > current.value) {
           if(!current.right) {
             current.right = node; 
@@ -59,3 +59,5 @@ class BinaryTree {
 //   // contains()
 
 // }
+
+module.exports = { Node, BinaryTree };
