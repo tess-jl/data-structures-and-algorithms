@@ -1,1 +1,1 @@
-const {Tree } = require('./fizzBuzzTree.js');
+const {fizzBuzzTree } = require('./fizzBuzzTree.js'); 
