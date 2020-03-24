@@ -1,6 +1,6 @@
+// Write a function called mergeLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. Try and keep additional space down to O(1). You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
 //code shared with me and Joel from our whiteboarding exercise
 class Node {
-  //each node has a value, and a next 
   constructor(value, next = null) {
     this.value = value;
     this.next = next;
@@ -8,22 +8,18 @@ class Node {
 }
 class LinkedList {
   constructor() {
-    //in order to get every node in the chain you need a reference to the first node!! akak the head, linked list starts out with nothing in it so it starts out as null 
     this.head = null;
     this.length = 0;
   }
 
   insert(value) {
-    //create a new node, set the next value as the head since we're inserting in front of the head
     const newNode = new Node(value, this.head);
-    //reset head to the node inserted
     this.head = newNode;
     this.length++;
   }
 
   includes(value) {
     let thisNode = this.head;
-    //while there is a node to check
     while(thisNode){
       if(value === thisNode.value) return true;
       thisNode = thisNode.next;
@@ -45,19 +41,6 @@ class LinkedList {
     return valuesStringed;
   }
 
-  //RYAN'S VERSION
-  // toString2() {
-  //   if(!this.head) return '';
-  //   const nodes = [];
-  //   let node = this.head;
-  //   while(node) {
-  //     nodes.push(node.value);
-  //     node = node.next;
-  //   }
-  //   return nodes.join(' --> ');
-  // }
-
-  //append(value) which adds a new node with the given value to the end of the list
   append(value) {
     let currentNode = this.head;
     const newNode = new Node(value, null);
@@ -67,11 +50,7 @@ class LinkedList {
     this.length++;
   }
 
-
-  //insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
-  //search for the value
   insertBefore(valToInsert, ref) {
-    //create two variables that can later be separated
     let currentNode = this.head;
     let previous = this.head; 
 
@@ -81,23 +60,17 @@ class LinkedList {
     }
 
     while(currentNode) {
-      //once we reach the value we want to insert before
       if(currentNode.value === ref) { 
-        //create a new node with the newVal param and set it equal to the head
-        // const nodeToInsert = new Node(valToInsert, this.head); 
-        //this.head is equal to currentNode! currentNode is actually the NEXT node in the sequence 
         const nodeToInsert = new Node(valToInsert, currentNode); 
         previous.next = nodeToInsert; 
         this.length++;
         return;
       }
-      //if haven't found value then keep currentNode same as previous 
       currentNode = previous; 
-      //iterate 
       currentNode = currentNode.next; 
     }
   }
-  //insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+
   insertAfter(valToInsert, ref) {
     let currentNode = this.head;
     let previous = this.head; 
@@ -114,25 +87,23 @@ class LinkedList {
     }
   }
 
-  kthFromEnd(k) {
-    let currentNode = this.head;
-    //if k is negative int or if k is bigger than length of list
-    if(k < 0 || k > this.length) {
-      return 'not a valid k value';
-    } 
-    //if k is same as length
-    else if(k === this.length) {
-      return this.head.value;
-    }
-    //Happy Path
-    else {
-      const kNumberForNode = this.length - k; 
-      for(let i = 1; i !== kNumberForNode; i++) {
-        currentNode = currentNode.next; 
-      }
-    }
-    return currentNode.value; 
-  }
+
+
+
 }
 
-module.exports = { LinkedList };
+function mergeLists(ll1, ll2) {
+  let ll1Node = ll1.head;
+  let ll2Node = ll2.head;
+
+  while(ll1Node && ll2Node) {
+    if(ll1Node.head) ll2Node.next = ll1Node.next; 
+    ll1Node.next = ll2Node;
+    //iterate
+    ll1Node = ll1Node.next;
+    ll2Node = ll2Node.next;
+  }
+  return ll1;
+}
+
+module.exports = { mergeLists, LinkedList }; 
