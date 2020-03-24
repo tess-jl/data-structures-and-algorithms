@@ -1,4 +1,4 @@
-const { fib} = require('./interview-02.js');
+const { fib } = require('./interview-02.js');
   
 describe('testing the fib function', () => {
   it('should return value or number n in fibonnacci sequence', () => {
