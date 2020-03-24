@@ -17,7 +17,7 @@ ___
 * Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
 * Write a function called mergeLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. Try and keep additional space down to O(1). You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
 
-1. Stacks and Queues: Create a brand new PseudoQueue class. Do not use an existing Queue. Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below), but will internally only utilize 2 Stack objects. The Stack instances have only push, pop, and peek methods. You should use your own Stack implementation. Instantiate these Stack objects in your PseudoQueue constructor. Ensure that you create your class with the following methods:
+5. Stacks and Queues: Create a brand new PseudoQueue class. Do not use an existing Queue. Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below), but will internally only utilize 2 Stack objects. The Stack instances have only push, pop, and peek methods. You should use your own Stack implementation. Instantiate these Stack objects in your PseudoQueue constructor. Ensure that you create your class with the following methods:
 * enqueue(value) which inserts value into the PseudoQueue, using a first-in, first-out approach.
 * dequeue() which extracts a value from the PseudoQueue, using a first-in, first-out approach.
 * Also, Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach. Implement the following methods:
@@ -28,18 +28,18 @@ ___
 * Square Brackets : []
 * Curly Brackets : {}
 
-1. Tree: Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.
+6. Tree: Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.
 * Create a BinaryTree class: Define a method for each of the depth first traversals called preOrder, inOrder, and postOrder which returns an array of the values, ordered appropriately.
 * Create a BinarySearchTree class: Define a method named add that accepts a value, and adds a new node with that value in the correct location in the binary search tree. Define a method named contains that accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
 
-1. fizzBuzzTree: Write a function called FizzBuzzTree which takes a tree as an argument.Without utilizing any of the built-in methods available to your language, determine whether or not the value of each node is divisible by 3, 5 or both. Create a new tree with the same structure as the original, but the values modified as follows:
+7. fizzBuzzTree: Write a function called FizzBuzzTree which takes a tree as an argument.Without utilizing any of the built-in methods available to your language, determine whether or not the value of each node is divisible by 3, 5 or both. Create a new tree with the same structure as the original, but the values modified as follows:
 * If the value is divisible by 3, replace the value with “Fizz”
 * If the value is divisible by 5, replace the value with “Buzz”
 * If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
 * If the value is not divisible by 3 or 5, simply turn the number into a String.
 * Return the new tree.
 
-1. Binary Tree: Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach, and return a list of the values in the tree in the order they were encountered.
+8. Binary Tree: Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach, and return a list of the values in the tree in the order they were encountered.
 
 
 
