@@ -114,9 +114,25 @@ class LinkedList {
     }
   }
 
-
-
-
+  kthFromEnd(k) {
+    let currentNode = this.head;
+    //if k is negative int or if k is bigger than length of list
+    if(k < 0 || k > this.length) {
+      return 'not a valid k value';
+    } 
+    //if k is same as length
+    else if(k === this.length) {
+      return this.head.value;
+    }
+    //Happy Path
+    else {
+      const kNumberForNode = this.length - k; 
+      for(let i = 1; i !== kNumberForNode; i++) {
+        currentNode = currentNode.next; 
+      }
+    }
+    return currentNode.value; 
+  }
 }
 
 module.exports = { LinkedList };
