@@ -98,6 +98,37 @@ class BinaryTree {
     }).apply(null, [this.root]);
     return postOrderArray;
   }
+
+  breadthFirstTraversal(){
+    if(!this.root) return;
+    const queue = [this.root];
+    const results = [];
+
+    while(queue.length > 0) {
+      const current = queue[0];
+      if(current.left) queue.push(current.left);
+      if(current.right) queue.push(current.right);
+      results.push(queue.shift().value);
+    }
+    return results;
+  }
+
+  findMax(){
+    if(this.root === null) return;
+
+    const queue = [this.root];
+    let maxValue = this.root.value;
+    
+    while(queue.length > 0){
+      const current = queue[0];
+      if(current.left) queue.push(current.left);
+      if(current.right) queue.push(current.right);
+      const currentValue = queue.shift().value;
+      maxValue = currentValue > maxValue ? currentValue : maxValue;
+    }
+    return maxValue;
+  }
+
 }
 
 

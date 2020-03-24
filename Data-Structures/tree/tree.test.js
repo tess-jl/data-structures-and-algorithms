@@ -67,6 +67,24 @@ describe('BinaryTree tests', () => {
     expect(tree.postOrder()).toEqual([2, 17, 7]);
   });
 
+  it('can traverse breadth first', () => {
+    const tree = new BinaryTree();
+    tree.add(7);
+    tree.add(2);
+    tree.add(17);
+
+    expect(tree.breadthFirstTraversal()).toEqual([7, 2, 17]);
+  });
+
+  it('can find max', () => {
+    const tree = new BinaryTree();
+    tree.add(7);
+    tree.add(2);
+    tree.add(17);
+
+    expect(tree.findMax()).toEqual(17);
+  });
+
 
 
 });
